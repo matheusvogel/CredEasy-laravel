@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Prompt:ital,wght@0,400;1,400;1,500&family=Satisfy&display=swap');
+
+.fonte-titulo {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold;
+}
+
+.fonte-navbar {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.fonte-carrosel {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.fonte-titulo-grande {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.fonte-subtitulo {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fonte-titulo-pequeno {
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+}
+
+.fonte-linhas-credito {
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+}
+
+.fonte-botao {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+.fonte-footer {
+    font-family: 'Prompt', sans-serif;
+    font-size: small;
+}
+
+.fonte-footer-redes {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.navbar-custom {
+     background-image: linear-gradient(233deg, #096466 0%, #00978d 100%);	
+}
+
+.card-largura {
+    width: 18rem;
+}
+
+.imagem-carrosel-1 {
+    object-fit: cover;
+    object-position: 0 40%;
+    height: 450px;
+}
+
+.imagem-carrosel-2 {
+    object-fit: cover;
+    object-position: 0 20%;
+    height: 450px;
+}
+
+.botao-cor-especial {
+    background-color: #00978d;
+    color: white;
+    
+}
+ 
+.borda-cor-especial:hover {
+    border-color: #f180a4;
+    border-width: 0.2rem;
+
+} 
+
+.card-posicao-imagem {
+    object-fit: cover;
+    height: 200px;
+}
+
+.numeros {
+    color: #ec648f;
+    font-size: 2.3rem;
+}
+
+.footer-custom {
+    background-image: linear-gradient(233deg, #096466 0%, #00978d 100%);
+}
+
+.icones-redes:hover {
+    color: white;
+}
+

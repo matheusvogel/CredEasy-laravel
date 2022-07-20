@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Prompt:ital,wght@0,400;1,400;1,500&family=Satisfy&display=swap');
+
+
+.fonte-titulo {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold;
+}
+
+.fonte-subtitulo {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fonte-navbar {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.fonte-footer {
+    font-family: 'Prompt', sans-serif;
+    font-size: small;
+}
+
+.fonte-footer-redes {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.navbar-custom {
+     background-image: linear-gradient(233deg, #096466 0%, #00978d 100%);	
+}
+
+.botao-cor-especial {
+    background-color: #ec648f;
+    color: white;
+}
+
+.footer-custom {
+    background-image: linear-gradient(233deg, #096466 0%, #00978d 100%);
+}
+
+.icones-redes:hover {
+    color: white;
+}
