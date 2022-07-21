@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmprestimoController;
+use App\Http\Controllers\ParcelaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,8 @@ Route::get('/cadastrar-emprestimo', [EmprestimoController::class, 'create']);
 Route::post('/emprestimos-salvos', [EmprestimoController::class, 'store']);
 Route::get('/emprestimo-detalhes/{emprestimo}', [EmprestimoController::class, 'show'])->name('emprestimo.show');
 
+Route::get('/listar-parcelas/{emprestimo}', [ParcelaController::class, 'index'])->name('parcela.index');
+
 Route::get('/', function(){
     return view('home');
 });
@@ -31,3 +34,6 @@ Route::get('/login-cliente', function(){
     return view('login');
 });
 
+Route::get('/dashboard-cliente', function(){
+    return view('dashboard');
+});

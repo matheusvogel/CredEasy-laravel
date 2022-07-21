@@ -8,13 +8,11 @@
     @vite('resources/css/app.scss')
 </head>
 <body>
-    
-
 <form method="get" action="/emprestimos-salvos">
     @csrf    
 <div class="container">
 
-    <h1>Detalhes do empréstimo</h1>
+    <h1 class="text-center">Detalhes do empréstimo</h1>
     
     <table class="table table-striped">
         <thead>
@@ -42,7 +40,7 @@
             </tr>
         </tbody>
     </table>
-     <button type="submit" class="btn btn-primary">Consultar parcelas</button>
+    <a href="{{ route('parcela.index', $emprestimo->id) }}" class="btn btn-primary">Consultar parcelas</a>
 </div>
 
     @vite('resources/js/app.js')

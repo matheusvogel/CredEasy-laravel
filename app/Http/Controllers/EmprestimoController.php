@@ -36,13 +36,13 @@ class EmprestimoController extends Controller
 
         $emprestimo->valor = $valorEmprestimo;
         $emprestimo->valor_final = 0;
-        $emprestimo->taxa_juros = 0.15;
+        $emprestimo->taxa_juros = 0.20;
         
         $date = now();
         $emprestimo->data_solicitacao = $date;
 
         $emprestimo->status = "SOLICITADO";
-        $emprestimo->cpf_cliente = "710.256.987-44";
+        $emprestimo->cpf_cliente = "012.365.987-48";
         
         $valorFinalEsperado = $emprestimo->valor * (1+ $emprestimo->taxa_juros);
         $valorDaParcela = $valorFinalEsperado / $quantidadeParcelas;

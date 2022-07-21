@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="../css/cadastro.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;
     700&family=Open+Sans:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet">
     <title>Solicitar empréstimo</title>
 </head>
 
 <body>
-<h1 class="text-center">Solicitar empréstimo</h1>
 
 <form method="post" action="/emprestimos-salvos">
     @csrf
+    <h1 class="text-center">Solicitar empréstimos</h1>
 
     <div class="container mt-2 ml-2">
         <div class="row">
