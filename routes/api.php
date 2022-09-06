@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EmprestimoController;
+use App\Http\Controllers\ParcelaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/listar-emprestimo', [EmprestimoController::class, 'listarEmprestimos']);
+
+Route::get('/detalhar-emprestimo/{emprestimo}', [EmprestimoController::class, 'detalharEmprestimos']);
+
+Route::get('/analisar-solicitacao', [ClienteController::class, 'analisarSolicitacao']);
+
+Route::get('/aprovar-solicitacao', [ParcelaController::class, 'aprovarSolicitacao']);
+
+
+
+

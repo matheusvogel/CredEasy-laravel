@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('renda', 10, 2, true);
             $table->string('endereco', 255);
             $table->string('profissao', 255);
-            $table->int('numero');
+            $table->string('numero');
             $table->string('email', 255);
             $table->string('senha', 2550);
             $table->string('tipo', 255);

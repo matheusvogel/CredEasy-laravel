@@ -33,7 +33,7 @@ class ClienteController extends Controller
 
         $cliente->nome = $nome;
         $cliente->email = $email;
-        $cliente->senha = $senha;
+        $cliente->senha = password_hash($senha, PASSWORD_ARGON2I);
         $cliente->cpf = $cpf;
         $cliente->numero = $telefone;
         $cliente->profissao = $profissao;
@@ -46,5 +46,11 @@ class ClienteController extends Controller
 
         return redirect('/login-cliente');
     }
+
+    public function analisarSolicitacao()
+    {
+        return Cliente::all();
+    }
+
 
 }

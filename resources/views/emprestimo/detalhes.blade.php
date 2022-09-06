@@ -29,7 +29,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{ $emprestimo->valor }}</td>
+                <td>R$ {{ number_format($emprestimo->valor, 2, ",", ".") }}</td>
                 <td>{{ $emprestimo->taxa_juros}}</td>
                 <td>{{ $emprestimo->valor_final}}</td>
                 <td>{{ $emprestimo->parcelas->count() }}</td>

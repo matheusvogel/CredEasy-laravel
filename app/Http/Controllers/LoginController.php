@@ -14,10 +14,18 @@ class LoginController
 
     public function store(Request $request)
     {
+    
         if(!Auth::attempt(['email' => $request->email, 'password' => $request->senha])) {
             return redirect()->back()->withErrors('Cliente ou senha inválidos');
         }
 
-        return redirect('/cadastrar-emprestimo');
+        return redirect('/dashboard-cliente');
      }
+
+    public function destroy() 
+    {
+        Auth::logout();
+
+        return redirect('/login-cliente');
+    } 
 }

@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmprestimoController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ParcelaController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,13 +29,17 @@ Route::get('/emprestimo-detalhes/{emprestimo}', [EmprestimoController::class, 's
 
 Route::get('/listar-parcelas/{emprestimo}', [ParcelaController::class, 'index'])->name('parcela.index');
 
+Route::get('/login-cliente', [LoginController::class, 'index'])->name('login.index');
+Route::post('/login-cliente', [LoginController::class, 'store'])->name('signin');
+Route::get('/logout', [LoginController::class, 'destroy'])->name('logout');
+
+Route::get('/analisar-solicitacao', [ClienteController::class, 'index']);
+
 Route::get('/', function(){
     return view('home');
 });
-Route::get('/login-cliente', function(){
-    return view('login');
-});
 
 Route::get('/dashboard-cliente', function(){
-    return view('dashboard');
+    $cliente = Auth::user();
+    return view('dashboard')->with('cliente', $cliente);
 });

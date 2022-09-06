@@ -9,7 +9,8 @@
     </head>
     <body>
         <div class="main-login">
-            <form class="form-login" method="get" action="/cadastrar-emprestimo">       
+            <form class="form-login" method="post" action="/login-cliente"> 
+              @csrf      
               <h2 class="form-login-heading">LOGIN</h2>
                 <input type="text" class="form-box" name="email" placeholder="Email" required/>
                 <input type="password" class="form-box" name="senha" placeholder="Senha" required/>      
@@ -17,7 +18,7 @@
                 <button class="btn-login" type="submit">Entrar</button>   
               </div>
               <div>
-                <p class="register">Não possui uma conta?<a href="/area-cliente"> <b>Cadastre-se</b></a></p>
+                <p class="register">Não possui uma conta?<a href="/cadastrar-cliente"> <b>Cadastre-se</b></a></p>
               </div>
               <div>
                 <p class="recover"><a href="#">Esqueceu a senha?</a></p>

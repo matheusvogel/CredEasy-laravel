@@ -10,6 +10,7 @@ class Emprestimo extends Model
     use HasFactory;
 
     protected $table = 'emprestimo';
+    protected $forenkey = 'string';
 
     public $timestamps = false;
 
@@ -17,4 +18,10 @@ class Emprestimo extends Model
     {
         return $this->hasMany(Parcela::class);
     }
+
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class);
+    }
+
 }

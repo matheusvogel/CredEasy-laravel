@@ -29,8 +29,8 @@
         <tbody>
             @foreach ($parcelas as $parcela)
             <tr>
-                <td>{{ $parcela->id }}</td>
-                <td>{{ $parcela->valor }}</td>
+                <td>{{ $parcela->numero }}</td>
+                <td>R$ {{ number_format($parcela->valor, 2, ",", ".") }}</td>
                 <td>{{ $parcela->data_vencimento }}</td>
                 <td>{{ $parcela->multa }}</td>
                 <td>{{ $parcela->valor_pago }}</td>

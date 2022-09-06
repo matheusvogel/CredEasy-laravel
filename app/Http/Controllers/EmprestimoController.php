@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Models\Emprestimo;
 use App\Models\Parcela;
 use DateInterval;
 use DateTime;
 use DateTimeImmutable;
+use Illuminate\Support\Facades\Auth;
 
 class EmprestimoController extends Controller
 {
-    public function index()
+    public function index(Cliente $cliente)
     {
+        $cliente= Auth::user();
+        
+        $emprestimos = $cliente->emprestimos;
+        // dd($cliente->emprestimos());
         return view('emprestimo.index')
-            ->with('emprestimos', Emprestimo::all());
+            ->with('emprestimos', $emprestimos);
     }
 
     public function create()
@@ -42,7 +48,7 @@ class EmprestimoController extends Controller
         $emprestimo->data_solicitacao = $date;
 
         $emprestimo->status = "SOLICITADO";
-        $emprestimo->cpf_cliente = "012.365.987-48";
+        $emprestimo->cpf_cliente = Auth::user()->cpf;
         
         $valorFinalEsperado = $emprestimo->valor * (1+ $emprestimo->taxa_juros);
         $valorDaParcela = $valorFinalEsperado / $quantidadeParcelas;
@@ -71,4 +77,15 @@ class EmprestimoController extends Controller
         return view('emprestimo.detalhes')
             ->with('emprestimo', $emprestimo);
     }  
+
+    public function listarEmprestimos() 
+    {
+        return Emprestimo::all();
+    }
+
+    public function detalharEmprestimos(Emprestimo $emprestimo)
+    {
+        $emprestimo->qtd_parcelas = $emprestimo->parcelas->count();
+        return $emprestimo;
+    }
 }

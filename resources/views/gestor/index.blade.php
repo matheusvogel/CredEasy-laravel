@@ -13,7 +13,7 @@
     
 <div class="container">
 
-    <h1>Listagem de clientes</h1>
+    <h1>Minha gestão</h1>
     
     <table class="table table-striped">
         <thead>
@@ -21,6 +21,8 @@
                 <th>Nome</th>
                 <th>Renda</th>
                 <th>Profissão</th>
+                <th>Solicitação</th>
+
             </tr>
         </thead>
         <tbody>
@@ -29,10 +31,12 @@
                 <td>{{ $cliente->nome }}</td>
                 <td>R$ {{ number_format($cliente->renda, 2, ",", ".") }}</td>
                 <td>{{ $cliente->profissao }}</td>
+                <td><a href="{{ route('emprestimo.show', $emprestimo->id) }}">Ver solicitações</a></td>
             </tr>
             @endforeach
         </tbody>
     </table>
+
 </div>
 
     @vite('resources/js/app.js')

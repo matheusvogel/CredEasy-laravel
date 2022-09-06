@@ -29,7 +29,7 @@
         <tbody>
             @foreach ($emprestimos as $emprestimo)
             <tr>
-                <td>{{ $emprestimo->valor }}</td>
+                <td>R$ {{ number_format($emprestimo->valor, 2, ",", ".") }}</td>
                 <td>{{ $emprestimo->data_solicitacao }}</td>
                 <td>{{ $emprestimo->parcelas->count() }}</td>
                 <td>{{ $emprestimo->numero}}</td>
@@ -38,7 +38,7 @@
             </tr>
             @endforeach
         </tbody>
-    </table>
+    </table>            
      <button type="submit" class="btn btn-primary">Novo empréstimo</button>
 </div>
 

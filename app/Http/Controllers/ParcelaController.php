@@ -14,4 +14,5 @@ class ParcelaController extends Controller
         return view('emprestimo.parcela')
             ->with('parcelas', $parcelas);         
     }
+
 }
