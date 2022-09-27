@@ -43,3 +43,5 @@ Route::get('/dashboard-cliente', function(){
     $cliente = Auth::user();
     return view('dashboard')->with('cliente', $cliente);
 });
+
+//testeee hehe
